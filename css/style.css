@@ -1,0 +1,535 @@
+/* Core styles */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+}
+
+#container{
+    display: grid;
+}
+
+header{
+    margin-top: 8px;
+}
+
+/*----------------------((_MOBILE VERSION_))--------------------*/
+/* to get rid of the outline when we click on the button */
+button:focus{
+    outline: 0;
+}
+
+/*== LOGO SECTION ==*/
+/* Logo properties */
+.logo{
+    width: 150px;
+    padding: 10px;
+}
+
+/*== NAVIGATION BAR ==*/
+/* nav */
+nav li{
+    text-align: center; 
+}
+
+nav li a{
+    text-decoration: none;
+    list-style-type: none;
+    color: rgb(88, 88, 88);
+    font-size: 1em;
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    letter-spacing: 1.5px;
+}
+
+/* change the font style and BG of navlinks */
+nav li a:hover{
+    background-color: rgb(236, 236, 236);
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* To hide the nav links */
+.nav-container{
+    display: none;
+}
+
+/* class to display the nav links */
+.active{
+    display: block;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1.4em;
+    right: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Hamburger menu setup */
+.toggle-button .bar {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(131, 131, 131);
+    border-radius: 8px;
+}
+
+/*== HERO IMAGE ==*/
+/* hero image */
+.cta{
+    position: relative;
+    margin: 10px;
+}
+
+.cta > *{
+    color: white;
+}
+
+.cta p{
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.cta a{
+    font-size: 0.6em;
+    position: absolute;
+    top: 55px;
+    left: 30px;
+}
+
+/*== CONTENT ==*/
+/* general style for all sections */
+section:not(.cta){
+    margin: 10px;
+    padding: 15px;
+    background-color: rgb(241, 241, 241);
+    line-height: 22px;
+}
+
+/* Main Content */
+/* Section 1 */
+.section-1{
+    border-left: 3px solid rgb(129, 96, 12);;
+}
+
+.section-1 h2{
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section-1 p{
+    text-indent: 3em;
+}
+
+.section-1 p:first-of-type{
+    margin-bottom: 8px;
+}
+
+/* Sidebar */
+/* Section 2 */
+.section-2{
+    border-left: 3px solid rgb(129, 96, 12);
+}
+
+.section-2 h3{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.section-2 a{
+    text-decoration: underline;
+    color: black;
+}
+
+.section-2 a:hover{
+    color: rgb(129, 96, 12);
+}
+
+/* Extra Content */
+/* Section 3 */
+section.section-3{
+    padding: 5px;
+}
+
+ul.card{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li.card1{
+    flex: 30%;
+    margin: 2px;
+    box-sizing: border-box;
+}
+
+/* Style the content of section 3 */
+.section-3 h4{
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.section-3 li{
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    box-shadow:0 0 3px rgb(151, 151, 151);
+    border-radius: 5px;
+    list-style-type: none;
+    border-bottom: 3px solid rgb(129, 96, 12);
+}
+
+.section-3 ul li button{
+    width: auto;
+    height: auto;
+    font-size: 0.6em;
+    padding: 6px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background-color: rgba(228, 228, 228, 0.5);
+    cursor: pointer;
+}
+
+.section-3 ul li button:hover{
+    background-color: rgb(129, 96, 12);
+    color: white;
+}
+
+.section-3 li{
+    position: relative;
+    padding-bottom: 55px;
+}
+
+.section-3 li button{
+    position: absolute;
+    bottom: 8px;
+}
+
+/* Related images */
+/* Section 4 */
+/* style for Categories */
+.section-4 h2{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Set display flex */
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* style for first p */
+li.flex-item p:nth-of-type(1){
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+/* style for last p */
+li.flex-item p:last-child{
+    font-size: 0.8em;
+}
+
+.flex-item{
+    max-width: 40%;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(129, 96, 12);
+}
+
+/* Related posts */
+/* Section 5 */
+.section-5{
+    border-left: 3px solid rgb(129, 96, 12);
+}
+
+.section-5 h3{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.section-5 li{
+    list-style: square;
+    margin-left: 18px;
+}
+
+.section-5 li a{
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+}
+
+.section-5 a:hover{
+    color: rgb(129, 96, 12);
+}
+
+/*== FOOTER ==*/
+/*== CONTACT & FORM AREA ==*/
+/* Contact style */
+footer#contact-form{
+    margin: 20px 10px;
+    background-size: cover;
+}
+
+.contact{
+    margin: 0px 15px;
+    padding-top: 25px;
+}
+
+.footer-item h3{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact > *{
+    line-height: 20px;
+}
+
+/* Form contact information */ 
+.form{
+    margin: 25px 15px; 
+}
+
+fieldset {
+	border:1px solid #ccc;
+	border-radius: 25px;
+    box-shadow:0 0 10px rgb(189, 189, 189);
+    padding: 15px 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+legend{
+    font-size: 1.4em;
+    font-weight: bolder;
+    color: rgb(53, 53, 53);
+}
+
+input[type=text], input[type=email]{
+    width: 95%;
+    padding: 8px 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: block;
+}
+
+textarea{
+    width: 95%;
+    height: 150px;
+    padding: 8px 10px;
+    margin: 10px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+}
+
+input[type=submit]{
+    margin-top: 20px;
+    padding: 15px;
+    min-width: 25%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+input[type=submit]:hover{
+    background-color: lightgray;
+}
+
+/* get rid of the submit button outline */
+input[type=submit]:focus{
+    outline: 0;
+}
+
+/* asterisk style */
+span{
+    color: red;
+}
+
+.asterisk{
+    font-size: 0.7em;
+}
+
+/* Top button */
+.mybutton{
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 30px;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button:hover{
+    background-color: lightgray;
+}
+
+/*----------------------((_DESKTOP VERSION_))--------------------*/
+@media only screen and (min-width: 650px){
+    /* Set the desktop layout */
+    #container{
+        grid-gap: 0px;
+        grid-template-columns: 0.4fr 0.3fr 0.3fr;
+        grid-template-areas: 
+        "header header header"
+        "hero Mcontent Mcontent"
+        "sidebar Mcontent Mcontent"
+        "sidebar extra extra"
+        "image image post"
+        "footer footer footer";
+    }
+
+    /* Set the area name */
+    header{
+        grid-area: header;
+    }
+
+    .hero{
+        grid-area: hero;
+    }
+
+    .section-1{
+        grid-area: Mcontent;
+    }
+
+    .section-2{
+        grid-area: sidebar;
+    }
+
+    .section-3{
+        grid-area: extra;
+    }
+
+    .section-4{
+        grid-area: image;
+    }
+
+    .section-5{
+        grid-area: post;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+
+    /*== NAVIGATION BAR ==*/
+    /* hide hamburger menu */
+    .toggle-button{
+        display: none;
+    }
+
+    header{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+
+    /* logo */
+    .logo{
+        min-width: 150px;
+    }
+
+    /* Navbar */
+    /* To show the nav links */
+    .nav-container{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+
+    nav li a{
+        border: none;
+        font-size: 1.1em;
+    }
+
+    /*== HERO IMAGE ==*/
+    /* hero image */
+    section.cta{
+        overflow: hidden;
+    }
+
+    /* set the image to fit the section area */
+    .cta img{
+        display: block;
+    }
+
+    /* Zoom hero image */
+    .hero{
+        transition: transform .5s;
+    }
+    
+    .hero:hover{
+        transform: scale(1.5);
+    }
+
+    /* Related images */
+    /* Section 4 */
+    .section-4{
+        margin: 10px;
+    }
+
+    .flex-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .flex-item{
+        margin: 19.5px;
+        width: 150px;
+    }
+
+    /* zoom */
+    .item{
+        transition: transform .5s;
+    }
+
+    .item:hover{
+        transform: scale(1.2);
+    }
+
+    div{
+        height: 150px;
+        overflow: hidden;
+    }
+
+    /*== CONTACT & FORM AREA ==*/
+    /* Footer */
+    .footer-container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    li.contact{
+        margin: 20px 15px;
+        padding: 10px;
+    }
+
+    .footer-item{
+        width: 50%;
+    }
+}
+/* ----- Thank you for marking ----- */
